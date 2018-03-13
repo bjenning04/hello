@@ -11,6 +11,10 @@
 		53620B2F2048F4FA007CD18E /* BTexture.c in Sources */ = {isa = PBXBuildFile; fileRef = 53620B2D2048F4FA007CD18E /* BTexture.c */; };
 		539A2CBA203F8AC4001E0614 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 539A2CB9203F8AC4001E0614 /* main.c */; };
 		539A2CC2203FD085001E0614 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539A2CC1203FD085001E0614 /* SDL2.framework */; };
+		539CD38A2055E7AC0095CB03 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539CD3892055E7AC0095CB03 /* SDL2_mixer.framework */; };
+		539CD38D2055F7800095CB03 /* BTimer.c in Sources */ = {isa = PBXBuildFile; fileRef = 539CD38B2055F7800095CB03 /* BTimer.c */; };
+		53C758E32053AFB500A6089F /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53C758E22053AFB500A6089F /* SDL2_ttf.framework */; };
+		53C758E62054D54D00A6089F /* BButton.c in Sources */ = {isa = PBXBuildFile; fileRef = 53C758E42054D54D00A6089F /* BButton.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,7 +36,12 @@
 		539A2CB6203F8AC4001E0614 /* Hello */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Hello; sourceTree = BUILT_PRODUCTS_DIR; };
 		539A2CB9203F8AC4001E0614 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		539A2CC1203FD085001E0614 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
-		539A2CC3203FE172001E0614 /* hello_world.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = hello_world.bmp; sourceTree = "<group>"; };
+		539CD3892055E7AC0095CB03 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
+		539CD38B2055F7800095CB03 /* BTimer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = BTimer.c; sourceTree = "<group>"; };
+		539CD38C2055F7800095CB03 /* BTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTimer.h; sourceTree = "<group>"; };
+		53C758E22053AFB500A6089F /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
+		53C758E42054D54D00A6089F /* BButton.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = BButton.c; sourceTree = "<group>"; };
+		53C758E52054D54D00A6089F /* BButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BButton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				539CD38A2055E7AC0095CB03 /* SDL2_mixer.framework in Frameworks */,
+				53C758E32053AFB500A6089F /* SDL2_ttf.framework in Frameworks */,
 				535AFFC920422A4600FE2881 /* SDL2_image.framework in Frameworks */,
 				539A2CC2203FD085001E0614 /* SDL2.framework in Frameworks */,
 			);
@@ -69,9 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				539A2CB9203F8AC4001E0614 /* main.c */,
-				539A2CC3203FE172001E0614 /* hello_world.bmp */,
 				53620B2D2048F4FA007CD18E /* BTexture.c */,
 				53620B2E2048F4FA007CD18E /* BTexture.h */,
+				53C758E42054D54D00A6089F /* BButton.c */,
+				53C758E52054D54D00A6089F /* BButton.h */,
+				539CD38B2055F7800095CB03 /* BTimer.c */,
+				539CD38C2055F7800095CB03 /* BTimer.h */,
 			);
 			path = Hello;
 			sourceTree = "<group>";
@@ -79,6 +93,8 @@
 		539A2CC0203FD084001E0614 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				539CD3892055E7AC0095CB03 /* SDL2_mixer.framework */,
+				53C758E22053AFB500A6089F /* SDL2_ttf.framework */,
 				535AFFC820422A4600FE2881 /* SDL2_image.framework */,
 				539A2CC1203FD085001E0614 /* SDL2.framework */,
 			);
@@ -142,8 +158,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				539CD38D2055F7800095CB03 /* BTimer.c in Sources */,
 				539A2CBA203F8AC4001E0614 /* main.c in Sources */,
 				53620B2F2048F4FA007CD18E /* BTexture.c in Sources */,
+				53C758E62054D54D00A6089F /* BButton.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@
 
 #include <stdbool.h>
 #include <SDL2/SDL.h>
+#include <SDL2_ttf/SDL_ttf.h>
 
 struct btexture;
 typedef struct btexture BTexture;
@@ -18,6 +19,7 @@ typedef struct btexture BTexture;
 BTexture *BTexture_create(void);
 void BTexture_destroy(BTexture *self);
 bool BTexture_loadFromFile(BTexture *self, SDL_Renderer *renderer, char *path);
+bool BTexture_loadFromRenderedText(BTexture *self, SDL_Renderer *renderer, TTF_Font *font, char *textureText, SDL_Color textColor);
 void BTexture_setColor(BTexture *self, Uint8 red, Uint8 green, Uint8 blue);
 void BTexture_setBlendMode(BTexture *self, SDL_BlendMode blending);
 void BTexture_setAlpha(BTexture *self, Uint8 alpha);

@@ -65,6 +65,27 @@ bool BTexture_loadFromFile(BTexture *self, SDL_Renderer *renderer, char *path)  
     return self->texture != NULL;
 }
 
+bool BTexture_loadFromRenderedText(BTexture *self, SDL_Renderer *renderer, TTF_Font *font, char *textureText, SDL_Color textColor) {
+    BTexture_reset(self);
+    
+    SDL_Surface *textSurface = TTF_RenderText_Solid(font, textureText, textColor);
+    if(textSurface == NULL) {
+        printf("Unable to render text surface! SDL_ttf Error: %s\n", TTF_GetError());
+    } else {
+        self->texture = SDL_CreateTextureFromSurface(renderer, textSurface);
+        if(self->texture == NULL) {
+            printf("Unable to create texture from rendered text! SDL Error: %s\n", SDL_GetError());
+        } else {
+            self->width = textSurface->w;
+            self->height = textSurface->h;
+        }
+        
+        SDL_FreeSurface(textSurface);
+    }
+    
+    return self->texture != NULL;
+}
+
 void BTexture_setColor(BTexture *self, Uint8 red, Uint8 green, Uint8 blue) {
     SDL_SetTextureColorMod(self->texture, red, green, blue);
 }
